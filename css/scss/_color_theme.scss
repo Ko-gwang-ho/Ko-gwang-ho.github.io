@@ -1,0 +1,39 @@
+:root[color-theme='dark'] {
+    --bg-door: #111111;
+
+    --bg-type1: #1a1a1a;
+    --bg-type2: #2e2e2e;
+    --bg-type3: #4d4d4d;
+    --bg-type4: #7d7d7d;
+    --bg-ability-item: rgba(20, 20, 20, .75);
+    --bg-line: rgba(0, 0, 0, 0.15);
+
+    --bg-opacity1: .1;
+    --bg-opacity2: .3;
+
+    --button-type: #363636;
+    --button-type-shadow: 0 1px 3px #000;
+
+    --font-type1: #fff;
+    --font-type2: #1f1f1f;
+}
+
+:root[color-theme='light'] {
+    --bg-door: #f3f3f3;
+
+    --bg-type1: #dddddd;
+    --bg-type2: #c4c4c4;
+    --bg-type3: #acacac;
+    --bg-type4: #a1a1a1;
+    --bg-ability-item: rgba(220, 220, 220, .75);
+    --bg-line: rgba(255, 255, 255, 0.1);
+
+    --bg-opacity1: .06;
+    --bg-opacity2: .04;
+
+    --button-type: #bbbbbb;
+    --button-type-shadow: 0 1px 3px #838383;
+    
+    --font-type1: #444;
+    --font-type2: #d6d6d6;
+}

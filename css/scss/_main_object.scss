@@ -1,0 +1,866 @@
+// 메인 오브젝트 겹친 순서대로 작성
+$zIndex: 100;
+$tDelay: 1.25s; 
+
+.main-con {
+    width: 100%;
+    height: 2000vh;
+}
+
+// 메인 원 오브젝트
+.main-object {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    transform-style: preserve-3d;
+    contain: paint;
+
+    .object-con {
+        display: flex;
+        position: absolute;
+        transition: filter .25s, transform .5s, opacity .5s, width .25s;
+        transition-timing-function: cubic-bezier(0.45, 0.05, 0.55, 0.95);
+
+        svg {
+            width: 100%;
+        }
+
+        circle {
+            transition: all .2s;
+        }
+    }
+
+    .intro {
+        display: flex;
+        justify-content: center;
+        position: absolute;
+        left: 0;
+        width: 100%;
+        height: 50vh;
+        background-color: var(--bg-door);
+        z-index: $zIndex - 3;
+        transition: top 1.5s, bottom 1.5s;
+        transition-timing-function: cubic-bezier(0.65, 0.05, 0.36, 1);
+        transition-delay: .65s;
+
+        span {
+            position: relative;
+            font-size: 1.7143rem;
+        }
+
+        .line {
+            position: absolute;
+            width: 0;
+            height: 1px;
+            left: 50%;
+            transform: translateX(-50%);
+            transition: width .2s, opacity .2s;
+            transition-timing-function: cubic-bezier(0.65, 0.05, 0.36, 1);
+            background-color: var(--bg-type2);
+        }
+
+        &.top {
+            align-items: end;
+            top: 0;
+
+            span {
+                bottom: 15%;
+
+                // breakpoint3
+                @media all and (min-width:480px) and (max-width:767px) {
+                    bottom: 10%;
+                }
+
+                // breakpoint4
+                @media all and (max-width:479px) {
+                    bottom: 10%;
+                }
+            }
+
+            .line {
+                bottom: 0;
+            }
+        }
+
+        &.bottom {
+            align-items: baseline;
+            bottom: 0;
+
+            span {
+                top: 15%;
+
+                // breakpoint3
+                @media all and (min-width:480px) and (max-width:767px) {
+                    top: 10%;
+                }
+
+                // breakpoint4
+                @media all and (max-width:479px) {
+                    top: 10%;
+                }
+            }
+
+            .line {
+                top: 0;
+            }
+        }
+    }
+
+    .scale0 {
+        transform: scale(0);
+    }
+
+    .switch {
+        z-index: $zIndex + 1;
+        width: 20px;
+        pointer-events: none;
+
+        path { fill: var(--font-type1); }
+    }
+    
+    .circle1 {
+        z-index: $zIndex;
+        width: 1.85%;
+        max-width: 36px;
+        min-width: 27px;
+
+        filter: drop-shadow(2px 4px 6px rgba(0, 0, 0, 0.2));
+        cursor: pointer;
+    
+        circle { fill: var(--bg-type1); }
+    }
+    
+    .circle2 {
+        z-index: $zIndex - 1;
+        width: 2.65%;
+        max-width: 50px;
+        min-width: 38px;
+    
+        circle { fill: var(--bg-type2); }
+    }
+    
+    .outline1 {
+        z-index: $zIndex - 2;
+        width: 5.5%;
+        max-width: 104px;
+        min-width: 78px;
+
+        path { fill: var(--bg-type3); }
+    }
+    
+    .outline2 {
+        z-index: $zIndex - 3;
+        width: 6.35%;
+        max-width: 120px;
+        min-width: 90px;
+
+        // intro 시작 전
+        transform: rotate(135deg);
+    
+        path { fill: var(--bg-type3); }
+    }
+    
+    .circle3 {
+        z-index: $zIndex - 4;
+        width: 4.75%;
+        max-width: 90px;
+        transition-delay: $tDelay - 0.5 !important;
+
+        // breakpoint2
+        @media all and (min-width:768px) and (max-width:1023px) { 
+            min-width: 68px;
+        }
+
+        // breakpoint3
+        @media all and (min-width:480px) and (max-width:767px) {
+            min-width: 68px;
+        }
+
+        // breakpoint4
+        @media all and (max-width:479px) {
+            min-width: 45px;
+        }
+    
+        circle { fill: var(--bg-type1); }
+    }
+    
+    .circle4 {
+        z-index: $zIndex - 5;
+        width: 6.95%;
+        max-width: 132px;
+        transition-delay: $tDelay - 0.475 !important;
+
+        // breakpoint2
+        @media all and (min-width:768px) and (max-width:1023px) { 
+            min-width: 99px;
+        }
+
+        // breakpoint3
+        @media all and (min-width:480px) and (max-width:767px) {
+            min-width: 99px;
+        }
+
+        // breakpoint4
+        @media all and (max-width:479px) {
+            min-width: 66px;
+        }
+    
+        circle { fill: var(--bg-type2); }
+    }
+    
+    .outline3 {
+        z-index: $zIndex - 6;
+        width: 7.68%;
+        max-width: 146px;
+        transition-delay: $tDelay - 0.45 !important;
+
+        // breakpoint2
+        @media all and (min-width:768px) and (max-width:1023px) { 
+            min-width: 110px;
+        }
+
+        // breakpoint3
+        @media all and (min-width:480px) and (max-width:767px) {
+            min-width: 110px;
+        }
+
+        // breakpoint4
+        @media all and (max-width:479px) {
+            min-width: 73px;
+        }
+    
+        circle {
+            fill: none;
+            stroke: var(--bg-type3);
+            stroke-miterlimit: 10;
+        }
+    }
+    
+    .circle5 {
+        z-index: $zIndex - 7;
+        width: 8.31%;
+        max-width: 158px;
+        transition-delay: $tDelay - 0.425 !important;
+
+        // breakpoint2
+        @media all and (min-width:768px) and (max-width:1023px) { 
+            min-width: 118px;
+        }
+
+        // breakpoint3
+        @media all and (min-width:480px) and (max-width:767px) {
+            min-width: 118px;
+        }
+
+        // breakpoint4
+        @media all and (max-width:479px) {
+            min-width: 79px;
+        }
+    
+        circle { fill: var(--bg-type1); }
+    }
+    
+    .circle-quarter1 {
+        z-index: $zIndex - 8;
+        width: 9.36%;
+        max-width: 178px;
+        transition-delay: $tDelay - 0.4 !important;
+
+        // breakpoint2
+        @media all and (min-width:768px) and (max-width:1023px) { 
+            min-width: 123px;
+        }
+
+        // breakpoint3
+        @media all and (min-width:480px) and (max-width:767px) {
+            min-width: 123px;
+        }
+
+        // breakpoint4
+        @media all and (max-width:479px) {
+            min-width: 89px;
+        }
+
+        svg {
+            animation: rotate-style1 30s linear 0s infinite;
+        }
+    
+        path { fill: var(--bg-type2); }
+    }
+    
+    .outline4 {
+        z-index: $zIndex - 9;
+        width: 11.8%;
+        max-width: 224px;
+        transition-delay: $tDelay - 0.375 !important;
+
+        // breakpoint2
+        @media all and (min-width:768px) and (max-width:1023px) { 
+            min-width: 168px;
+        }
+
+        // breakpoint3
+        @media all and (min-width:480px) and (max-width:767px) {
+            min-width: 168px;
+        }
+
+        // breakpoint4
+        @media all and (max-width:479px) {
+            min-width: 112px;
+        }
+
+        svg {
+            animation: rotate-style2 6s linear 0s infinite;
+        }
+    
+        path {
+            stroke-dasharray: 0 15.959 0 0 0 0;
+            fill: none;
+            stroke: var(--bg-type3);
+            stroke-linecap: round;
+            stroke-miterlimit: 10;
+            stroke-width: 5px;
+        }
+    }
+    
+    .outline5 {
+        z-index: $zIndex - 9;
+        width: 14.72%;
+        max-width: 280px;
+        transition-delay: $tDelay - 0.35 !important;
+
+        // breakpoint2
+        @media all and (min-width:768px) and (max-width:1023px) { 
+            min-width: 210px;
+        }
+
+        // breakpoint3
+        @media all and (min-width:480px) and (max-width:767px) {
+            min-width: 210px;
+        }
+
+        // breakpoint4
+        @media all and (max-width:479px) {
+            min-width: 140px;
+        }
+
+        svg {
+            animation: rotate-style1 60s linear 0s infinite;
+        }
+    
+        circle {
+            fill: none;
+            stroke: var(--bg-type4);
+            stroke-dasharray: 2.003 4.998 .01 0 0 0;
+            stroke-miterlimit: 10;
+            stroke-width: 11px;
+        }
+    }
+    
+    .outline6 {
+        z-index: $zIndex - 10;
+        width: 16.3%;
+        max-width: 310px;
+        transition-delay: $tDelay - 0.325 !important;
+
+        // breakpoint2
+        @media all and (min-width:768px) and (max-width:1023px) { 
+            min-width: 222px;
+        }
+
+        // breakpoint3
+        @media all and (min-width:480px) and (max-width:767px) {
+            min-width: 222px;
+        }
+
+        // breakpoint4
+        @media all and (max-width:479px) {
+            min-width: 155px;
+        }
+    
+        circle {
+            fill: none;
+            stroke: var(--bg-type4);
+            stroke-miterlimit: 10;
+        }
+    }
+    
+    .outline7 {
+        z-index: $zIndex - 11;
+        width: 18.6%;
+        max-width: 352px;
+        transition-delay: $tDelay - 0.3 !important;
+
+        // breakpoint2
+        @media all and (min-width:768px) and (max-width:1023px) { 
+            min-width: 264px;
+        }
+
+        // breakpoint3
+        @media all and (min-width:480px) and (max-width:767px) {
+            min-width: 264px;
+        }
+
+        // breakpoint4
+        @media all and (max-width:479px) {
+            min-width: 176px;
+        }
+    
+        circle {
+            fill: none;
+            stroke: var(--bg-type3);
+            stroke-miterlimit: 10;
+            stroke-width: 2px;
+        }
+    }
+    
+    .outline8 {
+        z-index: $zIndex - 12;
+        width: 20.71%;
+        max-width: 394px;
+        transition-delay: $tDelay - 0.275 !important;
+
+        // breakpoint2
+        @media all and (min-width:768px) and (max-width:1023px) { 
+            min-width: 295px;
+        }
+
+        // breakpoint3
+        @media all and (min-width:480px) and (max-width:767px) {
+            min-width: 295px;
+        }
+
+        // breakpoint4
+        @media all and (max-width:479px) {
+            min-width: 197px;
+        }
+
+        svg {
+            animation: rotate-style1 20s linear 0s infinite;
+        }
+    
+        path {
+            stroke-dasharray: .01 0 0 0;
+            fill: none;
+            stroke: var(--bg-type3);
+            stroke-miterlimit: 10;
+            stroke-width: 6px;
+    
+            &.sd {
+                stroke-dasharray: .996 8.955 .01 0 0 0;
+            }
+        }
+    }
+    
+    .circle-quarter2 {
+        z-index: $zIndex - 13;
+        width: 22.4%;
+        max-width: 426px;
+        transition-delay: $tDelay - 0.25 !important;
+
+        // breakpoint2
+        @media all and (min-width:768px) and (max-width:1023px) { 
+            min-width: 320px;
+        }
+
+        // breakpoint3
+        @media all and (min-width:480px) and (max-width:767px) {
+            min-width: 320px;
+        }
+
+        // breakpoint4
+        @media all and (max-width:479px) {
+            min-width: 213px;
+        }
+
+        svg {
+            animation: rotate-style2 60s linear 0s infinite;
+        }
+    
+        path {
+            fill: var(--bg-type1);
+        }
+    }
+    
+    .outline9 {
+        z-index: $zIndex - 14;
+        width: 23.54%;
+        max-width: 448px;
+        transition-delay: $tDelay - 0.225 !important;
+
+        // breakpoint2
+        @media all and (min-width:768px) and (max-width:1023px) { 
+            min-width: 336px;
+        }
+
+        // breakpoint3
+        @media all and (min-width:480px) and (max-width:767px) {
+            min-width: 336px;
+        }
+
+        // breakpoint4
+        @media all and (max-width:479px) {
+            min-width: 224px;
+        }
+
+        svg {
+            animation: rotate-style1 1s cubic-bezier(0.45, 0.05, 0.55, 0.95) 0s infinite;
+        }
+
+        path {
+            fill: none;
+            stroke: var(--bg-type3);
+            stroke-linecap: round;
+            stroke-miterlimit: 10;
+        }
+    }
+    
+    .outline10 {
+        z-index: $zIndex - 15;
+        width: 28%;
+        max-width: 532px;
+        transition-delay: $tDelay - 0.2 !important;
+
+        // breakpoint2
+        @media all and (min-width:768px) and (max-width:1023px) { 
+            min-width: 399px;
+        }
+
+        // breakpoint3
+        @media all and (min-width:480px) and (max-width:767px) {
+            min-width: 399px;
+        }
+
+        // breakpoint4
+        @media all and (max-width:479px) {
+            min-width: 266px;
+        }
+    
+        path {
+            fill: var(--bg-type1);
+        }
+    
+        .bg {
+            fill: var(--bg-type2);
+        }
+    }
+    
+    @keyframes rotate-style1 {
+        0% { transform: rotate(0deg); }
+        100% { transform: rotate(360deg); }
+    }
+    
+    @keyframes rotate-style2 {
+        0% { transform: rotate(0deg); }
+        100% { transform: rotate(-360deg); }
+    }
+}
+
+.object-bg {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 200%;
+    height: 100vh;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+    filter: blur(5px);
+    transition: width .5s;
+    transition-delay: $tDelay - .4;
+
+    &.ob1 {
+        background-image: url('../../img/object-bg1.png');
+        opacity: var(--bg-opacity1);
+    }
+
+    &.ob2 {
+        background-image: url('../../img/object-bg2.png');
+        opacity: var(--bg-opacity2);
+    }
+}
+
+.object-text-bg {
+    display: flex;
+    position: absolute;
+    top: 50%;
+    z-index: 0;
+    transform: translateY(-50%);
+    width: 100%;
+    height: 0;
+    padding-bottom: 13%;
+    max-height: 200px;
+    background-color: var(--bg-line);
+    border: 1px solid var(--bg-type4);
+    border-left: 0;
+    border-right: 0;
+
+    span {
+        flex: 0 0 100%;
+        color: var(--font-type2);
+        font-size: 8vw;
+        animation: bg-text-motion 15s linear infinite;
+    }
+}
+
+.object-load {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    z-index: $zIndex;
+    overflow: hidden;
+    width: 100px;
+    height: 100px;
+    border: 2px solid var(--bg-type4);
+    border-radius: 50%;
+    background-color: var(--bg-ability-item);
+    pointer-events: none;
+
+    span {
+        font-size: .4vw;
+    }
+}
+
+@keyframes bg-text-motion {
+    0% {
+        transform: translateX(0%);
+    }
+    100% {
+        transform: translateX(-100%);
+    }
+}
+
+.object-scroll {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 5px;
+    position: absolute;
+    bottom: 2%;
+    font-weight: bold;
+
+    svg {
+        overflow: visible;
+        height: 32px;
+        
+        g {
+            stroke: var(--font-type1);
+            stroke-linecap: round;
+            stroke-linejoin: round; 
+            stroke-miterlimit: 10;
+            stroke-width: 5;
+        }
+
+        path {
+            animation: scroll-motion 1s linear infinite backwards;
+            opacity: 0;
+        }
+
+        .sa2 { animation-delay: .1s; }
+        .sa3 { animation-delay: .2s; }
+    }
+}
+
+@keyframes scroll-motion {
+    0% {
+        transform: translateY(-20px);
+        opacity: 0;
+    }
+    50% {
+        transform: translateY(-10px);
+        opacity: 1;
+    }
+    100% {
+        transform: translateY(0px);
+        opacity: 0;
+    }
+}
+
+.sub-con {
+    position: relative;
+    z-index: 5;
+    contain: paint;
+    padding: 5%;
+}
+
+.object-ability-wrap {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    transform: scale(0);
+    transition: transform .5s;
+    transition-delay: $tDelay;
+    left: 0;
+    right: 0;
+    z-index: $zIndex + 1;
+    margin: auto;
+
+    .ability-circle {
+        position: fixed;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width: 40%;
+        max-width: 640px;
+        border: 2px solid var(--bg-type3);
+        border-radius: 50%;
+
+        // breakpoint2
+        @media all and (min-width:768px) and (max-width:1023px) { 
+            min-width: 472px;
+        }
+
+        // breakpoint3
+        @media all and (min-width:480px) and (max-width:767px) {
+            min-width: 472px;
+        }
+
+        // breakpoint4
+        @media all and (max-width:479px) {
+            min-width: 300px;
+        }
+
+        &::before {
+            content: "";
+            display: block;
+            padding-bottom: 100%;
+        }
+    }
+
+    .ability-item {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        right: 0;
+        left: 0;
+        overflow: hidden;
+        margin: auto;
+        padding: 10px;
+        background-color: var(--bg-ability-item);
+        border: 2px solid var(--bg-type4);
+        border-radius: 50%;
+        font-weight: bold;
+        text-align: center;
+        white-space: nowrap;
+
+        $abZindex: 8;
+
+        @for $i from 1 through $abZindex {
+            &:nth-child(#{$i}) {
+                z-index: $abZindex - $i;
+            }
+        }
+
+        h3 {
+            margin: 0 0 .5em 0;
+            font-size: 2.15em;
+            line-height: 1.5em;
+
+            // breakpoint1
+            @media all and (min-width:1024px) and (max-width:1279px) { 
+                font-size: 2em;
+            }
+
+            // breakpoint2
+            @media all and (min-width:768px) and (max-width:1023px) { 
+                font-size: 1.75em;
+            }
+
+            // breakpoint3
+            @media all and (min-width:480px) and (max-width:767px) {
+                font-size: 1.75em;
+            }
+
+            // breakpoint4
+            @media all and (max-width:479px) {
+                font-size: 1.5em;
+            }
+        }
+
+        p {
+            font-size: 1.5em;
+            line-height: 1.5em;
+
+            // breakpoint1
+            @media all and (min-width:1024px) and (max-width:1279px) { 
+                font-size: 1.25em;
+            }
+
+            // breakpoint2
+            @media all and (min-width:768px) and (max-width:1023px) { 
+                font-size: 1.05em;
+            }
+
+            // breakpoint3
+            @media all and (min-width:480px) and (max-width:767px) {
+                font-size: 1.05em;
+            }
+
+            // breakpoint4
+            @media all and (max-width:479px) {
+                font-size: 0.85em;
+            }
+        }
+
+        svg {
+            position: absolute;
+            top: 0;
+            right: 0;
+            bottom: 0;
+            left: 0;
+            margin: auto;
+
+            g, path {
+                fill: var(--font-type1);
+            }
+        }
+
+        &.a1 svg {
+            width: 50%;
+        }
+
+        &.a2 svg {
+            width: 55%;
+        }
+
+        &.a3 svg {
+            width: 40%;
+        }
+
+        &.a4 svg {
+            right: -5%;
+            bottom: -5%;
+            width: 60%;
+        }
+
+        &.a5 svg {
+            width: 60%;
+        }
+
+        &.a6 svg {
+            width: 60%;
+        }
+
+        &.a7 svg {
+            width: 50%;
+        }
+
+        &.a8 svg {
+            width: 45%;
+        }
+    }
+}
