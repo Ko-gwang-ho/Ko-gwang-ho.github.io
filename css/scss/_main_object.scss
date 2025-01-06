@@ -610,9 +610,6 @@ $tDelay: 1.25s;
 }
 
 .object-load {
-    display: flex;
-    justify-content: center;
-    align-items: center;
     position: absolute;
     z-index: $zIndex;
     overflow: hidden;
@@ -622,13 +619,12 @@ $tDelay: 1.25s;
     border-radius: 50%;
     background-color: var(--bg-ability-item);
     pointer-events: none;
+}
 
-    span {
-        font-size: .4vw;
-        backface-visibility: hidden;
-        transform: translateZ(0);
-        -webkit-font-smoothing: subpixel-antialiased;
-    }
+.object-project-list {
+    position: absolute;
+    z-index: $zIndex + 1;
+    font-size: 2vw;
 }
 
 @keyframes bg-text-motion {

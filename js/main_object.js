@@ -15,6 +15,7 @@ const abItem = document.querySelectorAll('.ability-item');
 const abItemText = document.querySelector('.ability-item .text');
 
 const objLoad = document.querySelector('.object-load');
+const objProjectList = document.querySelector('.object-project-list');
 
 const topBtn = document.querySelector('.fix-btn.top');
 const listBtn = document.querySelector('.fix-btn.list');
@@ -186,6 +187,22 @@ objLoad.animate(
         timeline: new ScrollTimeline({
             scrollOffsets: [
                 { target: mainCon, edge: 'start', threshold: .13 },
+                { target: mainCon, edge: 'end', threshold: 1 }
+            ]
+        })
+    }
+);
+
+objProjectList.animate(
+    [
+        { transform: 'scale(0)' },
+        { transform: 'scale(1)' }
+    ],
+    {
+        fill: 'both',
+        timeline: new ScrollTimeline({
+            scrollOffsets: [
+                { target: mainCon, edge: 'start', threshold: .12 },
                 { target: mainCon, edge: 'end', threshold: 1 }
             ]
         })
