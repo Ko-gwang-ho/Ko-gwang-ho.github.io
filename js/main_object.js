@@ -59,7 +59,7 @@ mainObjSvg[1].addEventListener('click', () => {
 mainObj.animate(
     [
         { transform: 'scale(1)' },
-        { transform: 'scale(6)' }
+        { transform: 'scale(5)' }
     ],
     {
         fill: 'both',
