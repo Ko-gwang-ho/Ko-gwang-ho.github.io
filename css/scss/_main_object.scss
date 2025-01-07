@@ -96,12 +96,12 @@ $tDelay: 1.25s;
 
                 // breakpoint3
                 @media all and (min-width:480px) and (max-width:767px) {
-                    top: 10%;
+                    top: 12%;
                 }
 
                 // breakpoint4
                 @media all and (max-width:479px) {
-                    top: 10%;
+                    top: 12%;
                 }
             }
 
@@ -287,7 +287,7 @@ $tDelay: 1.25s;
         }
 
         svg {
-            // animation: rotate-style1 30s linear 0s infinite;
+            animation: rotate-style1 30s linear 0s infinite;
         }
     
         path { fill: var(--bg-type2); }
@@ -315,7 +315,7 @@ $tDelay: 1.25s;
         }
 
         svg {
-            // animation: rotate-style2 6s linear 0s infinite;
+            animation: rotate-style2 6s linear 0s infinite;
         }
     
         path {
@@ -350,7 +350,7 @@ $tDelay: 1.25s;
         }
 
         svg {
-            // animation: rotate-style1 60s linear 0s infinite;
+            animation: rotate-style1 60s linear 0s infinite;
         }
     
         circle {
@@ -370,12 +370,12 @@ $tDelay: 1.25s;
 
         // breakpoint2
         @media all and (min-width:768px) and (max-width:1023px) { 
-            min-width: 222px;
+            min-width: 248px;
         }
 
         // breakpoint3
         @media all and (min-width:480px) and (max-width:767px) {
-            min-width: 222px;
+            min-width: 248px;
         }
 
         // breakpoint4
@@ -422,7 +422,7 @@ $tDelay: 1.25s;
     .outline8 {
         z-index: $zIndex - 12;
         width: 20.71%;
-        max-width: 394px;
+        max-width: 350px;
         transition-delay: $tDelay - 0.275 !important;
 
         // breakpoint2
@@ -441,7 +441,7 @@ $tDelay: 1.25s;
         }
 
         svg {
-            // animation: rotate-style1 20s linear 0s infinite;
+            animation: rotate-style1 20s linear 0s infinite;
         }
     
         path {
@@ -479,7 +479,7 @@ $tDelay: 1.25s;
         }
 
         svg {
-            // animation: rotate-style2 60s linear 0s infinite;
+            animation: rotate-style2 60s linear 0s infinite;
         }
     
         path {
@@ -509,7 +509,7 @@ $tDelay: 1.25s;
         }
 
         svg {
-            // animation: rotate-style1 1s cubic-bezier(0.45, 0.05, 0.55, 0.95) 0s infinite;
+            animation: rotate-style1 1s cubic-bezier(0.45, 0.05, 0.55, 0.95) 0s infinite;
         }
 
         path {
@@ -523,7 +523,7 @@ $tDelay: 1.25s;
     .outline10 {
         z-index: $zIndex - 15;
         width: 28%;
-        max-width: 532px;
+        max-width: 468px;
         transition-delay: $tDelay - 0.2 !important;
 
         // breakpoint2
@@ -605,7 +605,7 @@ $tDelay: 1.25s;
         flex: 0 0 100%;
         color: var(--font-type2);
         font-size: 8vw;
-        // animation: bg-text-motion 15s linear infinite;
+        animation: bg-text-motion 15s linear infinite;
     }
 }
 
@@ -658,7 +658,7 @@ $tDelay: 1.25s;
         }
 
         path {
-            // animation: scroll-motion 1s linear infinite backwards;
+            animation: scroll-motion 1s linear infinite backwards;
             opacity: 0;
         }
 
