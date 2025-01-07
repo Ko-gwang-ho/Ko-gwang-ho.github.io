@@ -370,12 +370,12 @@ $tDelay: 1.25s;
 
         // breakpoint2
         @media all and (min-width:768px) and (max-width:1023px) { 
-            min-width: 248px;
+            min-width: 222px;
         }
 
         // breakpoint3
         @media all and (min-width:480px) and (max-width:767px) {
-            min-width: 248px;
+            min-width: 222px;
         }
 
         // breakpoint4
@@ -422,7 +422,7 @@ $tDelay: 1.25s;
     .outline8 {
         z-index: $zIndex - 12;
         width: 20.71%;
-        max-width: 350px;
+        max-width: 394px;
         transition-delay: $tDelay - 0.275 !important;
 
         // breakpoint2
@@ -454,36 +454,6 @@ $tDelay: 1.25s;
             &.sd {
                 stroke-dasharray: .996 8.955 .01 0 0 0;
             }
-        }
-    }
-    
-    .circle-quarter2 {
-        z-index: $zIndex - 13;
-        width: 22.4%;
-        max-width: 426px;
-        transition-delay: $tDelay - 0.25 !important;
-
-        // breakpoint2
-        @media all and (min-width:768px) and (max-width:1023px) { 
-            min-width: 320px;
-        }
-
-        // breakpoint3
-        @media all and (min-width:480px) and (max-width:767px) {
-            min-width: 320px;
-        }
-
-        // breakpoint4
-        @media all and (max-width:479px) {
-            min-width: 213px;
-        }
-
-        svg {
-            animation: rotate-style2 60s linear 0s infinite;
-        }
-    
-        path {
-            fill: var(--bg-type1);
         }
     }
     
@@ -523,7 +493,7 @@ $tDelay: 1.25s;
     .outline10 {
         z-index: $zIndex - 15;
         width: 28%;
-        max-width: 468px;
+        max-width: 532px;
         transition-delay: $tDelay - 0.2 !important;
 
         // breakpoint2
