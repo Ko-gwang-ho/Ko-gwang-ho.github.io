@@ -55,23 +55,6 @@ mainObjSvg[1].addEventListener('click', () => {
 
 // 스크롤 모션
 
-// mainCon
-// mainObj.animate(
-//     [
-//         { transform: 'scale(1)' },
-//         { transform: 'scale(5)' }
-//     ],
-//     {
-//         fill: 'both',
-//         timeline: new ScrollTimeline({
-//             scrollOffsets: [
-//                 { target: mainCon, edge: 'start', threshold: .13 },
-//                 { target: mainCon, edge: 'end', threshold: 1 }
-//             ]
-//         })
-//     }
-// )
-
 // abCircle
 abCircle.animate(
     [
