@@ -4,7 +4,7 @@ $tDelay: 1.25s;
 
 .main-con {
     width: 100%;
-    height: 2000svh;
+    height: 2000vh;
 }
 
 // 메인 원 오브젝트
@@ -16,7 +16,7 @@ $tDelay: 1.25s;
     top: 0;
     left: 0;
     width: 100%;
-    height: 100svh;
+    height: 100vh;
     transform-style: preserve-3d;
     contain: paint;
 
@@ -41,7 +41,7 @@ $tDelay: 1.25s;
         position: absolute;
         left: 0;
         width: 100%;
-        height: 50svh;
+        height: 50vh;
         background-color: var(--bg-door);
         z-index: $zIndex - 3;
         transition: top 1.5s, bottom 1.5s;
@@ -537,7 +537,7 @@ $tDelay: 1.25s;
     left: 50%;
     transform: translateX(-50%);
     width: 200%;
-    height: 100svh;
+    height: 100vh;
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center center;
