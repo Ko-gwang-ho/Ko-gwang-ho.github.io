@@ -177,21 +177,21 @@ abItem.forEach((item, index) => {
     );
 });
 
-// objLoad.animate(
-//     [
-//         { transform: 'scale(0)' },
-//         { transform: 'scale(5)' }
-//     ],
-//     {
-//         fill: 'both',
-//         timeline: new ScrollTimeline({
-//             scrollOffsets: [
-//                 { target: mainCon, edge: 'start', threshold: .13 },
-//                 { target: mainCon, edge: 'end', threshold: 1 }
-//             ]
-//         })
-//     }
-// );
+objLoad.animate(
+    [
+        { transform: 'scale(0)' },
+        { transform: 'scale(5)' }
+    ],
+    {
+        fill: 'both',
+        timeline: new ScrollTimeline({
+            scrollOffsets: [
+                { target: mainCon, edge: 'start', threshold: .13 },
+                { target: mainCon, edge: 'end', threshold: 1 }
+            ]
+        })
+    }
+);
 
 objProjectList.animate(
     [
